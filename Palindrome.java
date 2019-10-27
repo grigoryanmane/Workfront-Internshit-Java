@@ -1,4 +1,3 @@
-package am.oop;
 
 public class Palindrome {
     public static boolean isPalindrom(String word) {
