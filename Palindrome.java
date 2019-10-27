@@ -4,10 +4,8 @@ public class Palindrome {
     public static boolean isPalindrom(String word) {
         boolean result = false;
 
-        //I could not find a regex expression that found all the symblos and replace them with ""
-        word = word.replaceAll(" ", "").toLowerCase();
-        word = word.replaceAll(",", "").toLowerCase();
-        word = word.replaceAll("\\?", "").toLowerCase();
+        String symbols = "[^\\w]";  //Expression for finding all the symbols
+        word = word.replaceAll(symbols, "").toLowerCase(); //Replace all the symbols with empty string
         
          for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == word.charAt(word.length() - i - 1)) {
